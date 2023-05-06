@@ -1,0 +1,38 @@
+.main {
+    padding: 10px;
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+.main h3 {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 0 0 10px;
+}
+.controls {
+    width: 200px;
+    padding: 10px;
+    position: relative;
+    top: 10px;
+    align-items: center;
+    align-content: center;
+
+}
+
+.controls input {
+   font-family: arial;
+   font-size: 18px;
+   width: 300px;
+   padding: 5px;
+   outline: dashed 1px black;
+}
+
+.controls button {
+    font-family: arial;
+   font-size: 15px;
+   width: 150px;
+   padding: 5px;
+   outline: dashed 1px black;
+}
+

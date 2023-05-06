@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Form</title>
+    <link rel="stylesheet" href="userForm.css">
+</head>
+<body>
+    <div class="main">
+        <h3>User Form</h3>
+        <div class="controls">
+            <input type="text" name="fullName" class="control" />
+        </div>
+        <div class="controls">
+            <input type="text" name="email" class="control" />
+        </div>
+        <div class="controls">
+            <button  name="save" class="control btnSave">Click to Save</button>
+        </div>
+    </div>
+
+    <script>
+        const buttonSave = document.getElementsByClassName('btnSave')[0];
+        buttonSave.addEventListener("click", function (e) {
+            e.preventDefault();
+            let formValues = document.getElementsByTagName('input');
+            formValues = [...formValues];  // ES6 ways
+            // formValues = Array.from(formValues);  
+            // From this way we can use to conver HTMLElement to Array
+            formValues.forEach(element => {
+               console.log(element.value);
+            });
+        });
+   </script>
+</body>
+</html>
