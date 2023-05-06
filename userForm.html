@@ -23,16 +23,21 @@
 
     <script>
         const buttonSave = document.getElementsByClassName('btnSave')[0];
-        buttonSave.addEventListener("click", function (e) {
+        (buttonSave) ? buttonSave.addEventListener("click", function (e) {
             e.preventDefault();
             let formValues = document.getElementsByTagName('input');
-            formValues = [...formValues];  // ES6 ways
-            // formValues = Array.from(formValues);  
-            // From this way we can use to conver HTMLElement to Array
+            if(formValues.length > 0) {
+                formValues = [...formValues];  // ES6 ways
+                // formValues = Array.from(formValues);  
+                // From this way we can use to conver HTMLElement to Array
+            } else {
+                formValues = [];
+            }
+        
             formValues.forEach(element => {
                console.log(element.value);
             });
-        });
+        }): "Button element is not exists";
    </script>
 </body>
 </html>
