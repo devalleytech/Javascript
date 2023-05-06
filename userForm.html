@@ -11,7 +11,7 @@
     <div class="main">
         <h3>User Form</h3>
         <div class="controls">
-            <input type="text" name="fullName" class="control" />
+            <input type="text" name="fullName" class="control" id="fname" />
         </div>
         <div class="controls">
             <input type="text" name="email" class="control" />
@@ -22,6 +22,9 @@
     </div>
 
     <script>
+
+
+
         const buttonSave = document.getElementsByClassName('btnSave')[0];
         (buttonSave) ? buttonSave.addEventListener("click", function (e) {
             e.preventDefault();
@@ -33,7 +36,6 @@
             } else {
                 formValues = [];
             }
-        
             formValues.forEach(element => {
                console.log(element.value);
             });
@@ -41,3 +43,5 @@
    </script>
 </body>
 </html>
+
+

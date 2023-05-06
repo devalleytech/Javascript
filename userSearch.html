@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get input values</title>
+</head>
+<body>
+    Search Input <input type="text" name="searchTextname" id="searchText" class="searchField" />
+
+    <button onclick="onHandlesubmit()">Click</button>
+
+    <script>
+        const inputById = document.querySelector('#searchText');
+        const inputByClass = document.querySelector('.searchField');
+        const inputByInput = document.querySelector('input');
+        const inputByInputName = document.querySelector("[name='searchTextname']");
+
+        const inputBypureId = document.getElementById('searchText');
+
+        const inputBypureClass = document.getElementsByClassName('searchField')[0];
+        
+        const onHandlesubmit =  () => {
+            // alert('test');
+            console.log(inputBypureClass.value, "By pure Class");
+        }
+    </script>
+
+</body>
+</html>
