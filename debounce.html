@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debounce Concept</title>
+</head>
+<body>
+    Search input : <input type="text" id="input" /><br /><br />
+   
+    Normal Input : <span id="normalInput"></span><br />
+
+    Debounce Input : <span id="debounceInput"></span>
+
+    <script>
+      const input = document.getElementById('input');
+
+      const normalInput = document.getElementById('normalInput');
+      const debounceInput = document.getElementById('debounceInput');
+
+      const normalInputCall = () => {
+        // console.log(input.value, "Normal Input");
+        normalInput.innerHTML = input.value;
+      }
+
+      const debounceInputCall = () => {
+        debounceInput.innerHTML = input.value;
+      }
+
+      let debounceTimer;
+      const debounce = (callBack, time) => {
+        window.clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(callBack, time);
+      }
+
+
+      input.addEventListener('input', ()=> {
+        normalInputCall();
+        debounce(debounceInputCall, 500);
+      }, false);
+
+
+
+    </script>
+
+</body>
+</html>
